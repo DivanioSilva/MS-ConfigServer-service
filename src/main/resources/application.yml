@@ -1,0 +1,14 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: configServer-service
+  cloud:
+    config-server:
+      git:
+        uri: https://github.com/DivanioSilva/ms-config-data.git
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://192.168.1.149:8761/eureka/}
+
